@@ -20,6 +20,7 @@ import com.example.gaurav.kotlin_navigationdrawer.model.Contact
 import com.example.gaurav.kotlin_navigationdrawer.settingStructure.ApiClient
 import com.example.gaurav.kotlin_navigationdrawer.settingStructure.ApiInterface
 import com.google.gson.Gson
+import okhttp3.ResponseBody
 
 import java.util.ArrayList
 
@@ -31,6 +32,7 @@ class HomeFragment : Fragment() {
 
     internal lateinit var binding: FragmentHomeBinding
     internal lateinit var mAdapter: HomeAdapter
+    /*defining contact object list*/
     internal lateinit var contactList: List<Contact>
     private var isInternetConnected: Boolean = false
 
@@ -51,6 +53,10 @@ class HomeFragment : Fragment() {
 
 
     private fun getContactData() {
+               /*api call by using retrofit*/
+
+       /* if you any doubts regarding api call repose you have one thing here */
+      /*  instead of paasing class name (API Response) you can paas <ResponseBody> to check only json of particular api*/
 
         try {
             if (isInternetConnected) {

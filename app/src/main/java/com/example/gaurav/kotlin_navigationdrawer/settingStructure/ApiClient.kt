@@ -9,6 +9,9 @@ import retrofit2.converter.gson.GsonConverterFactory
 
 object ApiClient {
 
+
+    //set up retrofit to make api calls
+
     var retrofit: Retrofit? = null
 
     val client: Retrofit?
